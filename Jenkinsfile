@@ -10,17 +10,28 @@ pipeline {
 
   stages {
 
-    stage('Html Site Web') {
+    stage('Clone sources') {
 
-      steps {
-
-        sh '''
-
-          java -version
-
-        '''
-
-      }
+      
+    }
+    
+    
+    stage('Some configuration'){
+      
+    }
+    
+    
+    stage('site web'){
+      
+    }
+    
+    stage('affchage details generé'){
+      
+    }
+    
+    stage('publish build infos'){
+      
+    }
 
     }
 
