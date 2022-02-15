@@ -1,9 +1,29 @@
 pipeline {
-    agent none
 
-}
-def getCommitHash() {
-    node {
-        return sh(script: 'git rev-parse --short HEAD || echo latest', returnStdout: true)
+  agent any
+
+  options {
+
+    buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
+
+  }
+
+  stages {
+
+    stage('Html Site Web') {
+
+      steps {
+
+        sh '''
+
+          java -version
+
+        '''
+
+      }
+
     }
+
+  }
+
 }
